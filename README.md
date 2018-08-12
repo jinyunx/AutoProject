@@ -1,0 +1,2 @@
+# AutoProject
+Auto cmake project
