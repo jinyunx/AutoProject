@@ -25,7 +25,7 @@ copyfile("demo.cpp", demo_file)
 cmake_dst_path = project_path + "/CMakeLists.txt"
 cmake_src = open("CMakeLists.txt")
 cmake_dst = open(cmake_dst_path, "w")
-cmake_dst.write("set(PROJECT_NAME " + project_name + ")\n")
+cmake_dst.write("project(" + project_name + ")\n")
 for line in cmake_src:
     cmake_dst.write(line)
 cmake_src.close()

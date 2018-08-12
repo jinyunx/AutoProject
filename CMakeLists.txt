@@ -1,4 +1,5 @@
-project(${PROJECT_NAME})
+
+cmake_minimum_required(VERSION 2.6)
 
 include_directories("${PROJECT_SOURCE_DIR}/3rd")
 
@@ -28,10 +29,10 @@ set(CMAKE_USE_RELATIVE_PATHS TRUE)
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
 set(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/lib")
 
-add_executable(${PROJECT_DEFINE_NAME}
-    src/${PROJECT_DEFINE_NAME}.cpp
+add_executable("${PROJECT_NAME}"
+    "src/${PROJECT_NAME}.cpp"
     )
 
-target_link_libraries(${PROJECT_DEFINE_NAME}
+target_link_libraries("${PROJECT_NAME}"
     pthread
     )
